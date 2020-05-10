@@ -1,0 +1,10 @@
+CC=cl
+CFLAGS=-c -Wall
+
+all: magic
+
+magic: Sixth_LR.obj
+    $(CC) Sixth_LR.obj  -o magic
+
+Sixth_LR.o: Sixth_LR.cpp
+    $(CC) $(CFLAGS) Sixth_LR.cpp
