@@ -1,0 +1,16 @@
+CC=cl
+CFLAGS=-c -Wall
+
+all: magic
+
+magic: eShop.by.obj ClientInformation.obj Product.obj
+    $(CC) eShop.by.obj ClientInformation.obj Product.obj -o magic
+
+eShop.by.o: eShop.by.cpp
+    $(CC) $(CFLAGS) eShop.by.cpp
+
+ClientInformation.o: ClientInformation.cpp
+    $(CC) $(CFLAGS) ClientInformation.cpp
+
+Product.o: Product.cpp
+    $(CC) $(CFLAGS) Product.cpp
